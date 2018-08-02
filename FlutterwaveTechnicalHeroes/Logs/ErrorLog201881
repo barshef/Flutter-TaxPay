@@ -1,0 +1,9 @@
+01/08/2018 11:30:35 ==> Could not find file 'C:\inetpub\wwwroot\BARSHEFDEVELOPMENTPROJECT\BarshefAspCore\BarshefAspCorePractice\FlutterwaveTechnicalChallenge\FlutterwaveTechnicalHeroes\Tiers\PrePaymentNotificationEmail.html'.
+01/08/2018 14:09:46 ==> Column 'AssessedAmount' does not belong to table Table.
+01/08/2018 16:13:29 ==> Thread was being aborted.
+01/08/2018 16:16:40 ==> Thread was being aborted.
+01/08/2018 16:20:23 ==> Thread was being aborted.
+01/08/2018 18:34:00 ==> Could not load file or assembly 'Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+01/08/2018 18:51:59 ==> Response status code does not indicate success: 400 (Bad Request).
+01/08/2018 18:55:20 ==> One or more errors occurred.
+01/08/2018 19:00:14 ==> One or more errors occurred.

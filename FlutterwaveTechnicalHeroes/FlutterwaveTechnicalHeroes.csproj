@@ -1,0 +1,721 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFF8CE7D-1487-4EC7-9A0A-847704F9C88A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlutterwaveTechnicalHeroes</RootNamespace>
+    <AssemblyName>FlutterwaveTechnicalHeroes</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Engine\chosen\chosen-sprite%402x.png" />
+    <Content Include="Assets\Engine\chosen\chosen-sprite.png" />
+    <Content Include="Assets\Engine\chosen\chosen.css" />
+    <Content Include="Assets\Engine\chosen\chosen.jquery.js" />
+    <Content Include="Assets\Engine\chosen\chosen.jquery.min.js" />
+    <Content Include="Assets\Engine\chosen\chosen.min.css" />
+    <Content Include="Assets\Engine\css\animate.css" />
+    <Content Include="Assets\Engine\css\blog.css" />
+    <Content Include="Assets\Engine\css\bootstrap.min.css" />
+    <Content Include="Assets\Engine\css\font-awesome.min.css" />
+    <Content Include="Assets\Engine\css\hippo-off-canvas.css" />
+    <Content Include="Assets\Engine\css\language-select.css" />
+    <Content Include="Assets\Engine\css\magnific-popup.css" />
+    <Content Include="Assets\Engine\css\menu.css" />
+    <Content Include="Assets\Engine\css\plugins\bootstrap-wysihtml5\bootstrap-wysihtml5.css" />
+    <Content Include="Assets\Engine\css\plugins\c3\c3.min.css" />
+    <Content Include="Assets\Engine\css\plugins\chartist\chartist.min.css" />
+    <Content Include="Assets\Engine\css\plugins\colorpicker\bootstrap-colorpicker.css" />
+    <Content Include="Assets\Engine\css\plugins\colorpicker\images\alpha-horizontal.png" />
+    <Content Include="Assets\Engine\css\plugins\colorpicker\images\alpha.png" />
+    <Content Include="Assets\Engine\css\plugins\colorpicker\images\hue-horizontal.png" />
+    <Content Include="Assets\Engine\css\plugins\colorpicker\images\hue.png" />
+    <Content Include="Assets\Engine\css\plugins\colorpicker\images\saturation.png" />
+    <Content Include="Assets\Engine\css\plugins\datatables\jquery.dataTables.css" />
+    <Content Include="Assets\Engine\css\plugins\datepicker\bootstrap-datepicker.css" />
+    <Content Include="Assets\Engine\css\plugins\dropzone\dropzone.css" />
+    <Content Include="Assets\Engine\css\plugins\dropzone\images\spritemap%402x.png" />
+    <Content Include="Assets\Engine\css\plugins\dropzone\images\spritemap.png" />
+    <Content Include="Assets\Engine\css\plugins\jvectormap\jquery-jvectormap-2.0.3.css" />
+    <Content Include="Assets\Engine\css\plugins\markdown\bootstrap-markdown.min.css" />
+    <Content Include="Assets\Engine\css\plugins\morris\morris.css" />
+    <Content Include="Assets\Engine\css\plugins\nouislider\nouislider.css" />
+    <Content Include="Assets\Engine\css\plugins\scrollbar\perfect-scrollbar.css" />
+    <Content Include="Assets\Engine\css\plugins\select2\select2.css" />
+    <Content Include="Assets\Engine\css\plugins\summernote\summernote.css" />
+    <Content Include="Assets\Engine\css\responsive.css" />
+    <Content Include="Assets\Engine\css\style.css" />
+    <Content Include="Assets\Engine\css\table\buttons.dataTables.min.css" />
+    <Content Include="Assets\Engine\css\table\jquery.dataTables.min.css" />
+    <Content Include="Assets\Engine\css\table\select2.css" />
+    <Content Include="Assets\Engine\css\table\uniform.css" />
+    <Content Include="Assets\Engine\css\template.css" />
+    <Content Include="Assets\Engine\css\typography.css" />
+    <Content Include="Assets\Engine\css\YTPlayer.css" />
+    <Content Include="Assets\Engine\fonts\flaticon\flaticon.css" />
+    <Content Include="Assets\Engine\fonts\flaticon\flaticon.html" />
+    <Content Include="Assets\Engine\fonts\flaticon\flaticon.svg" />
+    <Content Include="Assets\Engine\fonts\fontawesome\fontawesome-webfont.svg" />
+    <Content Include="Assets\Engine\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\Engine\img\admin.jpg" />
+    <Content Include="Assets\Engine\img\annual-thumb.jpg" />
+    <Content Include="Assets\Engine\img\billings.jpg" />
+    <Content Include="Assets\Engine\img\blog\blog-1.jpg" />
+    <Content Include="Assets\Engine\img\blog\blog-2.jpg" />
+    <Content Include="Assets\Engine\img\blog\blog-3.jpg" />
+    <Content Include="Assets\Engine\img\blog\blog-4.jpg" />
+    <Content Include="Assets\Engine\img\blog\blog-5.jpg" />
+    <Content Include="Assets\Engine\img\blog\blog-6.jpg" />
+    <Content Include="Assets\Engine\img\blog\blog.jpg" />
+    <Content Include="Assets\Engine\img\careerthumb.jpg" />
+    <Content Include="Assets\Engine\img\cargo.png" />
+    <Content Include="Assets\Engine\img\carousel-indicator-blue.png" />
+    <Content Include="Assets\Engine\img\carousel-indicator-green.png" />
+    <Content Include="Assets\Engine\img\carousel-indicator-tarquis.png" />
+    <Content Include="Assets\Engine\img\client\client-1.jpg" />
+    <Content Include="Assets\Engine\img\client\client-2.jpg" />
+    <Content Include="Assets\Engine\img\counter-bg.jpg" />
+    <Content Include="Assets\Engine\img\dummy.png" />
+    <Content Include="Assets\Engine\img\fast.png" />
+    <Content Include="Assets\Engine\img\feature-bg.jpg" />
+    <Content Include="Assets\Engine\img\feature-bg2.jpg" />
+    <Content Include="Assets\Engine\img\flags\argentina.svg" />
+    <Content Include="Assets\Engine\img\flags\australia.svg" />
+    <Content Include="Assets\Engine\img\flags\bangladesh.svg" />
+    <Content Include="Assets\Engine\img\flags\belgium.svg" />
+    <Content Include="Assets\Engine\img\flags\brazil.svg" />
+    <Content Include="Assets\Engine\img\flags\canada.svg" />
+    <Content Include="Assets\Engine\img\flags\denmark.svg" />
+    <Content Include="Assets\Engine\img\flags\finland.svg" />
+    <Content Include="Assets\Engine\img\flags\france.svg" />
+    <Content Include="Assets\Engine\img\flags\germany.svg" />
+    <Content Include="Assets\Engine\img\flags\italy.svg" />
+    <Content Include="Assets\Engine\img\flags\japan.svg" />
+    <Content Include="Assets\Engine\img\flags\new-zealand.svg" />
+    <Content Include="Assets\Engine\img\flags\saudi-arabia.svg" />
+    <Content Include="Assets\Engine\img\flags\singapore.svg" />
+    <Content Include="Assets\Engine\img\flags\south-africa.svg" />
+    <Content Include="Assets\Engine\img\flags\south-korea.svg" />
+    <Content Include="Assets\Engine\img\flags\spain.svg" />
+    <Content Include="Assets\Engine\img\flags\united-kingdom.svg" />
+    <Content Include="Assets\Engine\img\flags\united-states.svg" />
+    <Content Include="Assets\Engine\img\grabbing.png" />
+    <Content Include="Assets\Engine\img\gradientbg.png" />
+    <Content Include="Assets\Engine\img\InstitutionImages\2.png" />
+    <Content Include="Assets\Engine\img\InstitutionImages\2\favicon.ico" />
+    <Content Include="Assets\Engine\img\InstitutionImages\2\logo.png" />
+    <Content Include="Assets\Engine\img\InstitutionImages\3.png" />
+    <Content Include="Assets\Engine\img\InstitutionImages\3\favicon.ico" />
+    <Content Include="Assets\Engine\img\InstitutionImages\3\logo.png" />
+    <Content Include="Assets\Engine\img\intro-bg.jpg" />
+    <Content Include="Assets\Engine\img\logo.png" />
+    <Content Include="Assets\Engine\img\map-marker.png" />
+    <Content Include="Assets\Engine\img\moving.jpg" />
+    <Content Include="Assets\Engine\img\page-header-bg.jpg" />
+    <Content Include="Assets\Engine\img\page-title-bg.jpg" />
+    <Content Include="Assets\Engine\img\partner\m-partner-1.jpg" />
+    <Content Include="Assets\Engine\img\partner\m-partner-2.jpg" />
+    <Content Include="Assets\Engine\img\partner\m-partner-3.jpg" />
+    <Content Include="Assets\Engine\img\partner\m-partner-4.jpg" />
+    <Content Include="Assets\Engine\img\partner\p1.jpg" />
+    <Content Include="Assets\Engine\img\partner\p2.jpg" />
+    <Content Include="Assets\Engine\img\partner\p3.jpg" />
+    <Content Include="Assets\Engine\img\partner\p4.jpg" />
+    <Content Include="Assets\Engine\img\partner\p5.jpg" />
+    <Content Include="Assets\Engine\img\partner\partner-1.jpg" />
+    <Content Include="Assets\Engine\img\partner\partner-2.jpg" />
+    <Content Include="Assets\Engine\img\partner\partner-3.jpg" />
+    <Content Include="Assets\Engine\img\partner\partner-4.jpg" />
+    <Content Include="Assets\Engine\img\partner\partner-5.jpg" />
+    <Content Include="Assets\Engine\img\partner\partner-6.jpg" />
+    <Content Include="Assets\Engine\img\paybills.jpg" />
+    <Content Include="Assets\Engine\img\payimg\billings.jpg" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\10\favicon.ico" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\10\logo.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\10\logo1.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\10\ogunlogo.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\favicon.ico" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\Keep\5StepsUpdate.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\Keep\logo2.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\Keep\ogunlogo.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\Keep\ogunstate.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\logo.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\logo1.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\logo2.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\logo4.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\LogoBanner.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\logoFormer.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\logoo.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\logoOld.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\logoold1.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\logos.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\logosogun.png" />
+    <Content Include="Assets\Engine\img\payimg\loginimage\28\logostates.png" />
+    <Content Include="Assets\Engine\img\payimg\olumorock.jpg" />
+    <Content Include="Assets\Engine\img\payimg\onlinepayment.png" />
+    <Content Include="Assets\Engine\img\payimg\onlinepayment1.png" />
+    <Content Include="Assets\Engine\img\payimg\onlinepaymentss.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\5steps1-min.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\creditcards.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\images.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\images.png" />
+    <Content Include="Assets\Engine\img\payimg\Others\imagesUAOWKGL5.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\iswlogonewcombined.png" />
+    <Content Include="Assets\Engine\img\payimg\Others\MasterCard1.jpeg" />
+    <Content Include="Assets\Engine\img\payimg\Others\MasterCard2.jpeg" />
+    <Content Include="Assets\Engine\img\payimg\Others\online.gif" />
+    <Content Include="Assets\Engine\img\payimg\Others\Onlinebanner.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\paybanner.png" />
+    <Content Include="Assets\Engine\img\payimg\Others\paylink.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\payonlinecardindentity.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\suceedtrans.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\taxpaid.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\tranimg.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\tranimg1.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\transimgs.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\VerveCard.jpeg" />
+    <Content Include="Assets\Engine\img\payimg\Others\vervemaster.png" />
+    <Content Include="Assets\Engine\img\payimg\Others\VisaCard.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Others\VisaCard3.jpeg" />
+    <Content Include="Assets\Engine\img\payimg\paybills.jpg" />
+    <Content Include="Assets\Engine\img\payimg\paymentbanner.jpg" />
+    <Content Include="Assets\Engine\img\payimg\paymenteasy.gif" />
+    <Content Include="Assets\Engine\img\payimg\PaymentsBanner.jpg" />
+    <Content Include="Assets\Engine\img\payimg\paymentseasy.gif" />
+    <Content Include="Assets\Engine\img\payimg\paymentseasy1.jpg" />
+    <Content Include="Assets\Engine\img\payimg\payroutbrg.png" />
+    <Content Include="Assets\Engine\img\payimg\PuzzleAssessment.jpg" />
+    <Content Include="Assets\Engine\img\payimg\PuzzleAssessmentPure.png" />
+    <Content Include="Assets\Engine\img\payimg\service-home2-bg.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Slider\paymenteasyedited.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Slider\paymenteasyedited1.gif" />
+    <Content Include="Assets\Engine\img\payimg\Slider\paymenteasyeditedpng.png" />
+    <Content Include="Assets\Engine\img\payimg\Slider\paymenteasyediteds.png" />
+    <Content Include="Assets\Engine\img\payimg\Slider\payments.png" />
+    <Content Include="Assets\Engine\img\payimg\Slider\slideimg.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Slider\SlidePay1.jpg" />
+    <Content Include="Assets\Engine\img\payimg\Slider\SlidePay2.jpg" />
+    <Content Include="Assets\Engine\img\payimg\taxpayer.jpg" />
+    <Content Include="Assets\Engine\img\payimg\taxpayers.jpg" />
+    <Content Include="Assets\Engine\img\payimg\taxpayers1.png" />
+    <Content Include="Assets\Engine\img\payimg\track.png" />
+    <Content Include="Assets\Engine\img\payimg\TransPay.png" />
+    <Content Include="Assets\Engine\img\paymentbanner.jpg" />
+    <Content Include="Assets\Engine\img\paymenteasy.gif" />
+    <Content Include="Assets\Engine\img\preloder.gif" />
+    <Content Include="Assets\Engine\img\PuzzleAssessment.jpg" />
+    <Content Include="Assets\Engine\img\reliable.png" />
+    <Content Include="Assets\Engine\img\secure.png" />
+    <Content Include="Assets\Engine\img\service-home2-bg.jpg" />
+    <Content Include="Assets\Engine\img\service\airthumb.jpg" />
+    <Content Include="Assets\Engine\img\service\logisticthumb.png" />
+    <Content Include="Assets\Engine\img\service\marinethumb.jpg" />
+    <Content Include="Assets\Engine\img\service\movingthumb.png" />
+    <Content Include="Assets\Engine\img\service\movingthumb2.png" />
+    <Content Include="Assets\Engine\img\service\service-1.jpg" />
+    <Content Include="Assets\Engine\img\service\service-2.jpg" />
+    <Content Include="Assets\Engine\img\service\service-3-1.jpg" />
+    <Content Include="Assets\Engine\img\service\service-3-2.jpg" />
+    <Content Include="Assets\Engine\img\service\service-3-3.jpg" />
+    <Content Include="Assets\Engine\img\service\service-3.jpg" />
+    <Content Include="Assets\Engine\img\service\service-4.jpg" />
+    <Content Include="Assets\Engine\img\service\service-5.jpg" />
+    <Content Include="Assets\Engine\img\service\service-6.jpg" />
+    <Content Include="Assets\Engine\img\service\service-tab-1.jpg" />
+    <Content Include="Assets\Engine\img\service\service-tab-2.jpg" />
+    <Content Include="Assets\Engine\img\service\service-tab-3.jpg" />
+    <Content Include="Assets\Engine\img\service\service-tab-4.jpg" />
+    <Content Include="Assets\Engine\img\service\service-v2-1.jpg" />
+    <Content Include="Assets\Engine\img\service\shippingthumb.png" />
+    <Content Include="Assets\Engine\img\service\sv1.jpg" />
+    <Content Include="Assets\Engine\img\service\sv2.jpg" />
+    <Content Include="Assets\Engine\img\service\sv3.jpg" />
+    <Content Include="Assets\Engine\img\service\thumbgrid1.png" />
+    <Content Include="Assets\Engine\img\service\thumbgrid2.png" />
+    <Content Include="Assets\Engine\img\service\thumbgrid3.png" />
+    <Content Include="Assets\Engine\img\service\truckingthumb.png" />
+    <Content Include="Assets\Engine\img\service\zoom1.jpg" />
+    <Content Include="Assets\Engine\img\service\zoom3.jpg" />
+    <Content Include="Assets\Engine\img\shipping.jpg" />
+    <Content Include="Assets\Engine\img\slider\slide-1.jpg" />
+    <Content Include="Assets\Engine\img\slider\slide-2.jpg" />
+    <Content Include="Assets\Engine\img\slider\tranimg.jpg" />
+    <Content Include="Assets\Engine\img\taxpayer.jpg" />
+    <Content Include="Assets\Engine\img\taxpayers.jpg" />
+    <Content Include="Assets\Engine\img\team\introthumb.jpg" />
+    <Content Include="Assets\Engine\img\team\tm1.jpg" />
+    <Content Include="Assets\Engine\img\team\tm2.jpg" />
+    <Content Include="Assets\Engine\img\team\tm3.jpg" />
+    <Content Include="Assets\Engine\img\team\tm4.jpg" />
+    <Content Include="Assets\Engine\img\team\tm5.jpg" />
+    <Content Include="Assets\Engine\img\team\tm6.jpg" />
+    <Content Include="Assets\Engine\img\topbar-bg.jpg" />
+    <Content Include="Assets\Engine\img\track.png" />
+    <Content Include="Assets\Engine\img\trans.jpg" />
+    <Content Include="Assets\Engine\img\TransPay.png" />
+    <Content Include="Assets\Engine\img\zoomin.png" />
+    <Content Include="Assets\Engine\js\bootstrap.min.js" />
+    <Content Include="Assets\Engine\js\classie.js" />
+    <Content Include="Assets\Engine\js\flickerPhoto.min.js" />
+    <Content Include="Assets\Engine\js\flickr-stream.js" />
+    <Content Include="Assets\Engine\js\hippo-offcanvas.js" />
+    <Content Include="Assets\Engine\js\jquery.countTo.js" />
+    <Content Include="Assets\Engine\js\jquery.inview.min.js" />
+    <Content Include="Assets\Engine\js\jquery.js" />
+    <Content Include="Assets\Engine\js\jquery.magnific-popup.min.js" />
+    <Content Include="Assets\Engine\js\jquery.mb.YTPlayer.js" />
+    <Content Include="Assets\Engine\js\jquery.stellar.js" />
+    <Content Include="Assets\Engine\js\jquery.sticky-kit.min.js" />
+    <Content Include="Assets\Engine\js\jquery.sticky.js" />
+    <Content Include="Assets\Engine\js\scripts.js" />
+    <Content Include="Assets\Engine\js\selectFx.js" />
+    <Content Include="Assets\Engine\js\smoothscroll.js" />
+    <Content Include="Assets\Engine\js\Table\bootstrap-colorpicker.js" />
+    <Content Include="Assets\Engine\js\Table\bootstrap-datepicker.js" />
+    <Content Include="Assets\Engine\js\Table\bootstrap-wysihtml5.js" />
+    <Content Include="Assets\Engine\js\Table\bootstrap.js" />
+    <Content Include="Assets\Engine\js\Table\bootstrap.min.js" />
+    <Content Include="Assets\Engine\js\Table\buttons.flash.min-1.3.1.js" />
+    <Content Include="Assets\Engine\js\Table\buttons.html5.min-1.3.1.js" />
+    <Content Include="Assets\Engine\js\Table\buttons.print.min-1.3.1.js" />
+    <Content Include="Assets\Engine\js\Table\dataTables.buttons.min-1.3.1.js" />
+    <Content Include="Assets\Engine\js\Table\excanvas.min.js" />
+    <Content Include="Assets\Engine\js\Table\fullcalendar.min.js" />
+    <Content Include="Assets\Engine\js\Table\jquery-1.12.4.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.dataTables.min-1.10.15.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.dataTables.min.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.easy-pie-chart.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.flot.crosshair.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.flot.min.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.flot.pie.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.flot.pie.min.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.flot.resize.min.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.flot.stack.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.gritter.min.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.min.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.peity.min.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.ui.custom.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.uniform.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.validate.js" />
+    <Content Include="Assets\Engine\js\Table\jquery.wizard.js" />
+    <Content Include="Assets\Engine\js\Table\jszip.min-3.1.3.js" />
+    <Content Include="Assets\Engine\js\Table\masked.js" />
+    <Content Include="Assets\Engine\js\Table\matrix.calendar.js" />
+    <Content Include="Assets\Engine\js\Table\matrix.charts.js" />
+    <Content Include="Assets\Engine\js\Table\matrix.chat.js" />
+    <Content Include="Assets\Engine\js\Table\matrix.dashboard.js" />
+    <Content Include="Assets\Engine\js\Table\matrix.form_common.js" />
+    <Content Include="Assets\Engine\js\Table\matrix.form_validation.js" />
+    <Content Include="Assets\Engine\js\Table\matrix.interface.js" />
+    <Content Include="Assets\Engine\js\Table\matrix.js" />
+    <Content Include="Assets\Engine\js\Table\matrix.login.js" />
+    <Content Include="Assets\Engine\js\Table\matrix.popover.js" />
+    <Content Include="Assets\Engine\js\Table\matrix.tables.js" />
+    <Content Include="Assets\Engine\js\Table\matrix.wizard.js" />
+    <Content Include="Assets\Engine\js\Table\pdfmake-vfs_fonts-0.1.27.js" />
+    <Content Include="Assets\Engine\js\Table\pdfmake.min-0.1.27.js" />
+    <Content Include="Assets\Engine\js\Table\select2.min.js" />
+    <Content Include="Assets\Engine\js\Table\wysihtml5-0.3.0.js" />
+    <Content Include="Assets\Engine\js\twitter-fetcher.js" />
+    <Content Include="Assets\Engine\js\twitterFetcher_min.js" />
+    <Content Include="Assets\Engine\js\vendor\html5shim.js" />
+    <Content Include="Assets\Engine\js\vendor\modernizr-2.8.1.min.js" />
+    <Content Include="Assets\Engine\js\vendor\respond.min.js" />
+    <Content Include="Assets\Engine\owl.carousel\assets\owl.carousel.css" />
+    <Content Include="Assets\Engine\owl.carousel\owl.carousel.js" />
+    <Content Include="Assets\Engine\owl.carousel\owl.carousel.min.js" />
+    <Content Include="Assets\Engine\select2\dist\css\select2.css" />
+    <Content Include="Assets\Engine\select2\dist\css\select2.min.css" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\az.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\bg.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\ca.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\cs.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\da.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\de.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\en.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\es.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\et.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\eu.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\fa.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\fi.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\fr.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\gl.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\he.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\hi.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\hr.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\hu.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\id.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\is.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\it.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\ko.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\lt.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\lv.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\mk.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\nb.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\nl.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\pl.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\pt-BR.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\pt.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\ro.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\ru.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\sk.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\sr.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\sv.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\th.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\tr.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\uk.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\vi.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\zh-CN.js" />
+    <Content Include="Assets\Engine\select2\dist\js\i18n\zh-TW.js" />
+    <Content Include="Assets\Engine\select2\dist\js\select2.full.js" />
+    <Content Include="Assets\Engine\select2\dist\js\select2.full.min.js" />
+    <Content Include="Assets\Engine\select2\dist\js\select2.js" />
+    <Content Include="Assets\Engine\select2\dist\js\select2.min.js" />
+    <Content Include="Assets\PayUtilityWizard\css\bootstrap-rtl.min.css" />
+    <Content Include="Assets\PayUtilityWizard\css\bootstrap.css" />
+    <Content Include="Assets\PayUtilityWizard\css\bootstrap.min.css" />
+    <Content Include="Assets\PayUtilityWizard\css\entypo.css" />
+    <Content Include="Assets\PayUtilityWizard\css\font-awesome.min.css" />
+    <Content Include="Assets\PayUtilityWizard\css\mouldifi-core.css" />
+    <Content Include="Assets\PayUtilityWizard\css\mouldifi-forms.css" />
+    <Content Include="Assets\PayUtilityWizard\css\mouldifi-rtl-core.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\bootstrap-wysihtml5\bootstrap-wysihtml5.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\c3\c3.min.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\chartist\chartist.min.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\colorpicker\bootstrap-colorpicker.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\colorpicker\images\alpha-horizontal.png" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\colorpicker\images\alpha.png" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\colorpicker\images\hue-horizontal.png" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\colorpicker\images\hue.png" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\colorpicker\images\saturation.png" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\datatables\jquery.dataTables.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\datepicker\bootstrap-datepicker.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\dropzone\dropzone.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\dropzone\images\spritemap%402x.png" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\dropzone\images\spritemap.png" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\jvectormap\jquery-jvectormap-2.0.3.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\markdown\bootstrap-markdown.min.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\morris\morris.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\nouislider\nouislider.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\scrollbar\perfect-scrollbar.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\select2\select2.css" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\summernote\summernote.css" />
+    <Content Include="Assets\PayUtilityWizard\fonts\entypo.svg" />
+    <Content Include="Assets\PayUtilityWizard\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\PayUtilityWizard\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\PayUtilityWizard\js\blockui-master\jquery-ui.js" />
+    <Content Include="Assets\PayUtilityWizard\js\blockui-master\jquery.blockUI.js" />
+    <Content Include="Assets\PayUtilityWizard\js\blockui-master\license.txt" />
+    <Content Include="Assets\PayUtilityWizard\js\bootstrap.js" />
+    <Content Include="Assets\PayUtilityWizard\js\bootstrap.min.js" />
+    <Content Include="Assets\PayUtilityWizard\js\functions.js" />
+    <Content Include="Assets\PayUtilityWizard\js\html5shiv.min.js" />
+    <Content Include="Assets\PayUtilityWizard\js\jquery.min.js" />
+    <Content Include="Assets\PayUtilityWizard\js\jquery.validate.min.js" />
+    <Content Include="Assets\PayUtilityWizard\js\metismenu\jquery.metisMenu.js" />
+    <Content Include="Assets\PayUtilityWizard\js\respond.min.js" />
+    <Content Include="Assets\PayUtilityWizard\js\select2\select2.full.min.js" />
+    <Content Include="Assets\PayUtilityWizard\js\wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="Assets\PayUtilityWizard\js\wizard\MIT-LICENSE.txt" />
+    <Content Include="Assets\Wizard\css\font-awesome.css" />
+    <Content Include="Assets\Wizard\css\style.css" />
+    <Content Include="Assets\Wizard\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\Wizard\images\banner.jpg" />
+    <Content Include="Assets\Wizard\index.html" />
+    <Content Include="Assets\Wizard\js\jquery.formtowizard.js" />
+    <Content Include="Assets\Wizard\js\jquery.min.js" />
+    <Content Include="Assets\Wizard\js\jquery.validate.min.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="JsModal\bootbox.js" />
+    <Content Include="Tiers\AgencyPage.aspx" />
+    <Content Include="Tiers\DeclinedTrans.aspx" />
+    <Content Include="Tiers\ErrorPage.aspx" />
+    <Content Include="Tiers\HomePage.aspx" />
+    <Content Include="Tiers\LoginAccess.aspx" />
+    <Content Include="Tiers\PaymentDetails.aspx" />
+    <Content Include="Tiers\PayResponseMail.html" />
+    <Content Include="Tiers\PrePaymentNotificationEmail.html" />
+    <Content Include="Tiers\RaveResponse.aspx" />
+    <Content Include="Tiers\RequerryFailTransaction.aspx" />
+    <Content Include="Tiers\RequerryTransaction.aspx" />
+    <Content Include="Tiers\RetryFailTransaction.aspx" />
+    <Content Include="Tiers\RevenueDetails.aspx" />
+    <Content Include="Tiers\SuccessTrans.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorLog\CreateLogFiles.cs" />
+    <Compile Include="ErrorLog\ExceptionErrorLogger.cs" />
+    <Compile Include="ErrorLog\MyCustomException.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MessageHandler\MessageClass.cs" />
+    <Compile Include="MessageHandler\RaveResponseClass.cs" />
+    <Compile Include="MessageHandler\RaveVerifyResponseClass.cs" />
+    <Compile Include="SqlDbUtilities\DataBaseHandler.cs" />
+    <Compile Include="SqlDbUtilities\DbConnection.cs" />
+    <Compile Include="SqlDbUtilities\Hash512Helper.cs" />
+    <Compile Include="SqlDbUtilities\HashPasswordHelper.cs" />
+    <Compile Include="SqlDbUtilities\SecurePasswordHasher.cs" />
+    <Compile Include="SqlDbUtilities\SessionNullCheckers.cs" />
+    <Compile Include="SqlDbUtilities\SHA256HMAC-ENCODE.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tiers\AgencyPage.aspx.cs">
+      <DependentUpon>AgencyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tiers\AgencyPage.aspx.designer.cs">
+      <DependentUpon>AgencyPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tiers\DeclinedTrans.aspx.cs">
+      <DependentUpon>DeclinedTrans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tiers\DeclinedTrans.aspx.designer.cs">
+      <DependentUpon>DeclinedTrans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tiers\ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tiers\ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tiers\HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tiers\HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tiers\LoginAccess.aspx.cs">
+      <DependentUpon>LoginAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tiers\LoginAccess.aspx.designer.cs">
+      <DependentUpon>LoginAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tiers\PaymentDetails.aspx.cs">
+      <DependentUpon>PaymentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tiers\PaymentDetails.aspx.designer.cs">
+      <DependentUpon>PaymentDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tiers\RaveMasterPage.Master.cs">
+      <DependentUpon>RaveMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tiers\RaveMasterPage.Master.designer.cs">
+      <DependentUpon>RaveMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tiers\RaveResponse.aspx.cs">
+      <DependentUpon>RaveResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tiers\RaveResponse.aspx.designer.cs">
+      <DependentUpon>RaveResponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tiers\RequerryFailTransaction.aspx.cs">
+      <DependentUpon>RequerryFailTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tiers\RequerryFailTransaction.aspx.designer.cs">
+      <DependentUpon>RequerryFailTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tiers\RequerryTransaction.aspx.cs">
+      <DependentUpon>RequerryTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tiers\RequerryTransaction.aspx.designer.cs">
+      <DependentUpon>RequerryTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tiers\RetryFailTransaction.aspx.cs">
+      <DependentUpon>RetryFailTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tiers\RetryFailTransaction.aspx.designer.cs">
+      <DependentUpon>RetryFailTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tiers\RevenueDetails.aspx.cs">
+      <DependentUpon>RevenueDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tiers\RevenueDetails.aspx.designer.cs">
+      <DependentUpon>RevenueDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tiers\SuccessTrans.aspx.cs">
+      <DependentUpon>SuccessTrans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tiers\SuccessTrans.aspx.designer.cs">
+      <DependentUpon>SuccessTrans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApiConnector\Helper.cs" />
+    <Compile Include="WebApiConnector\RavePararameters.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Engine\css\plugins\summernote\font\summernote.eot" />
+    <Content Include="Assets\Engine\css\plugins\summernote\font\summernote.ttf" />
+    <Content Include="Assets\Engine\css\plugins\summernote\font\summernote.woff" />
+    <Content Include="Assets\Engine\fonts\flaticon\flaticon.eot" />
+    <Content Include="Assets\Engine\fonts\flaticon\flaticon.ttf" />
+    <Content Include="Assets\Engine\fonts\flaticon\flaticon.woff" />
+    <Content Include="Assets\Engine\fonts\fontawesome\fontawesome-webfont.eot" />
+    <Content Include="Assets\Engine\fonts\fontawesome\fontawesome-webfont.ttf" />
+    <Content Include="Assets\Engine\fonts\fontawesome\fontawesome-webfont.woff" />
+    <Content Include="Assets\Engine\fonts\fontawesome\FontAwesome.otf" />
+    <Content Include="Assets\Engine\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\Engine\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\Engine\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\Engine\img\.DS_Store" />
+    <Content Include="Assets\Engine\img\slider\.DS_Store" />
+    <Content Include="Assets\Wizard\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\Wizard\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\Wizard\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\Wizard\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\Wizard\fonts\FontAwesome.otf" />
+    <Content Include="Assets\PayUtilityWizard\css\mouldifi-core.css.map" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\summernote\font\summernote.eot" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\summernote\font\summernote.ttf" />
+    <Content Include="Assets\PayUtilityWizard\css\plugins\summernote\font\summernote.woff" />
+    <Content Include="Assets\PayUtilityWizard\fonts\entypo.eot" />
+    <Content Include="Assets\PayUtilityWizard\fonts\entypo.ttf" />
+    <Content Include="Assets\PayUtilityWizard\fonts\entypo.woff" />
+    <Content Include="Assets\PayUtilityWizard\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\PayUtilityWizard\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\PayUtilityWizard\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\PayUtilityWizard\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\PayUtilityWizard\fonts\FontAwesome.otf" />
+    <Content Include="Assets\PayUtilityWizard\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\PayUtilityWizard\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\PayUtilityWizard\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\PayUtilityWizard\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\PayUtilityWizard\js\metismenu\LICENSE" />
+    <Content Include="Assets\PayUtilityWizard\js\select2\LICENSE.md" />
+    <Content Include="Assets\Engine\chosen\.bower.json" />
+    <None Include="packages.config" />
+    <Content Include="Tiers\RaveMasterPage.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Logs\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60933</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/FlutterwaveTechnicalHeroes</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
